@@ -1,0 +1,145 @@
+* {
+   background-color: red;
+   font-size: medium;
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 1.5;
+}
+.listas {
+
+   list-style-type: circle;
+
+}
+.container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+   grid-template-areas:
+      "header header header"
+      "section1 section1 section1"
+      "section1 section1 section1"
+      "section2 section2 section2"
+      "section3 section3 section3"
+      "footer footer footer";
+}
+
+.header {
+   grid-area: header;
+   display: flex;
+   align-content: stretch;
+   justify-content: space-between;
+   align-items: center;
+   height: 150px
+}
+
+.section1 {
+   grid-area: section1;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   background-color: blue;
+}
+
+.section2 {
+   grid-area: section2;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+   background-color: yellow;
+}
+
+.section3 {
+   grid-area: section3;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+   background-color: pink;
+}
+
+.footer {
+   grid-area: footer;
+   display: flex;
+   align-content: center;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   background-color: green;
+
+}
+
+h1 {
+   border: black 5px solid;
+   color: white;
+   font-size: 40px;
+   text-decoration: underline;
+}
+
+
+
+p {
+   text-align: center;
+   padding: 200px;
+   background-image: url('../img/piojo-Verde_paisaje_del_infierno.png');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   margin: 50px;
+   height: 40px;
+}
+form{
+   background-color: aliceblue;
+}
+footer {
+   display: inline-block;
+}
+
+@media (max-width:768px) {
+   .section1 {
+      background-color: aqua;
+      overflow: scroll;
+   }
+
+   .section2 {
+      background-color: tomato;
+   }
+
+   .section3 {
+      background-color: beige;
+   }
+
+   .footer {
+      background-color: blueviolet;
+   }
+}
+
+@media (max-width:420px) {
+   .header {
+      justify-content: space-around;
+   }
+
+   p {
+      padding: 50px;
+      overflow: hidden;
+   }
+
+   .section1 {
+      background-color: rgb(255, 123, 0);
+      overflow: scroll;
+   }
+
+   .section2 {
+      background-color: rgb(255, 71, 224);
+   }
+
+   .section3 {
+      background-color: rgb(220, 228, 245);
+   }
+
+   .footer {
+      background-color: rgba(56, 131, 141, 0);
+   }
+}
